@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class configureEntities {
+public class generateReportController {
 
-    @GetMapping(value = "/generateReport")
+    @GetMapping(value = "/generateReports")
     public ResponseEntity<String> getReports(){
         return new ResponseEntity<String>("getReports", HttpStatus.OK);
     }
