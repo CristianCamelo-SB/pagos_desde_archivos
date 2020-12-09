@@ -20,10 +20,10 @@ export class UploadFileComponent implements OnInit {
   onUpload(){
     let formData = new FormData();
     for (let i = 0; i < this.uploadFiles.length; i++) {
-      formData.append('uploads[]', this.uploadFiles[i], this.uploadFiles[i].name);
+      formData.append('files', this.uploadFiles[i], this.uploadFiles[i].name);
     }
     this.uploadFileService.uploadFile(formData).subscribe(res => {
-
+      console.log(res);
     }, error => {
       
     });
