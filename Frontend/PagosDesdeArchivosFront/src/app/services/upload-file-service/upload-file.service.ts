@@ -9,7 +9,7 @@ export class UploadFileService {
   constructor(private http: HttpClient) { }
 
   uploadFile(formData){
-    let urlAPI = 'http://localhost:3000/api/subir';
+    let urlAPI = 'http://localhost:8080/api/uploadFile';
     return this.http.post(urlAPI, formData);
   }
 }
