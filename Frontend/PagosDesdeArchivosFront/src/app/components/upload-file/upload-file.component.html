@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="content">
+        <div class="header">
+            <h1>File upload</h1>
+        </div>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span id="btnUpload" class="input-group-text upload" (click)="onUpload()">Subir</span>
+            </div>
+            <div class="custom-file">
+                <form action="http://localhost:8080/api/uploadFile" method="POST" enctype="multipart/form-data">
+                    <input type="file" class="custom-file-input" id="input-custom-file" (change)="onFileChange($event)">
+                    <Label class="custom-file-label" for="input-custom-file">Elige un archivo</Label>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

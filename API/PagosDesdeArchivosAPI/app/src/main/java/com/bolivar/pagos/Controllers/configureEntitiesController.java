@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class configureEntities {
+public class configureEntitiesController {
 
     @GetMapping(value = "/configureEntities")
     public ResponseEntity<String> getEntities(){
@@ -32,10 +32,5 @@ public class configureEntities {
     @PutMapping(value = "configureEntity")
     public ResponseEntity<String> updateEntity(@RequestParam("id") String id){
         return new ResponseEntity<String>("updateEntity " , HttpStatus.ACCEPTED);
-    }
-
-    //@RequestMapping("/uploadFile")
-    public String inicio() {
-        return "Estamos en /api/alguploadFileo";
     }
 }
