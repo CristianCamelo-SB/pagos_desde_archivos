@@ -1,0 +1,7 @@
+<p>Configurar entidades</p>
+<lu *ngFor="let entity of entities">
+    <h2>{{ entity.name }}</h2>
+    <p>{{ entity.nit }}</p>
+    <p>{{ entity.address }}</p>
+    <a [routerLink]="['/configureEntities', entity.id]">Ver</a>
+</lu>
