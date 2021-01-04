@@ -1,0 +1,8 @@
+<p>Generar reporte</p>
+<lu *ngFor="let entity of entities">
+    <h2>{{ entity.name }}</h2>
+    <p>{{ entity.nit }}</p>
+    <p>{{ entity.address }}</p>
+    <p>{{ entity.payment }}</p>
+    <a [routerLink]="['/generateReport', entity.id]">Ver</a>
+</lu>
