@@ -1,0 +1,14 @@
+<div *ngIf="changeInfo; else elseBlock">
+    <input type="text" [value]="entity.name">
+    <input type="text" [value]="entity.nit">
+    <input type="text" [value]="entity.address">
+    <a [routerLink]="['/configureEntities', entity.id]">Aceptar</a>
+    <a (click)="changeInfo = false">Aceptar</a>
+</div>
+<ng-template #elseBlock>
+    <h2>{{ entity.name }}</h2>
+    <p>{{ entity.nit }}</p>
+    <p>{{ entity.address }}</p>
+    <a [routerLink]="['/configureEntities/edit', entity.id]">Editar</a>
+    <a (click)="changeInfo = true">Editar</a>
+</ng-template>
